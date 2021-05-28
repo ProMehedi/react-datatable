@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import DataTable from './components/DataTable'
 
 const App = () => {
   const [data, setData] = useState([])
@@ -19,12 +20,11 @@ const App = () => {
     getUsers()
   }, [])
 
-  console.log(data)
-
   return (
-    <div>
-      <h1>Hello!</h1>
-    </div>
+    <>
+      <h1>Data Table with ReactJS</h1>
+      <DataTable data={data} />
+    </>
   )
 }
 
