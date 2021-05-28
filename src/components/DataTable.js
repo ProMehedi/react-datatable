@@ -19,14 +19,9 @@ const DataTable = ({ data }) => {
         <tbody>
           {data.map((row) => (
             <tr key={row.id}>
-              <td>{row.id}</td>
-              <td>{row.name}</td>
-              <td>{row.username}</td>
-              <td>{row.email}</td>
-              <td>{row.address.city}</td>
-              <td>{row.phone}</td>
-              <td>{row.website}</td>
-              <td>{row.company.name}</td>
+              {columns.map((column, index) => (
+                <td key={index}>{row[column]}</td>
+              ))}
             </tr>
           ))}
         </tbody>
