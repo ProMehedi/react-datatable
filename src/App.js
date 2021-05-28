@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Container, FormControl } from 'react-bootstrap'
 import DataTable from './components/DataTable'
 
 const App = () => {
@@ -20,11 +21,22 @@ const App = () => {
     getUsers()
   }, [])
 
+  const searchTable = (rows) => {
+    return rows.filter((row) => row.name.toLowerCase().indexOf(query) > -1)
+  }
+
   return (
-    <>
-      <h1>Data Table with ReactJS</h1>
-      <DataTable data={data} />
-    </>
+    <Container>
+      <h2 className='my-5 text-center'>Data-Table with ReactJS</h2>
+      <div className='mb-3'>
+        <FormControl
+          placeholder='Search here...'
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </div>
+      <DataTable data={searchTable(data)} />
+    </Container>
   )
 }
 
