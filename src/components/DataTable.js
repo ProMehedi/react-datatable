@@ -17,13 +17,24 @@ const DataTable = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((row) => (
-            <tr key={row.id}>
-              {columns.map((column, index) => (
-                <td key={index}>{row[column]}</td>
-              ))}
+          {data &&
+            data.length > 0 &&
+            data.map((row) => (
+              <tr key={row.id}>
+                {columns.map((column, index) => (
+                  <td key={index}>{row[column]}</td>
+                ))}
+              </tr>
+            ))}
+          {data && data.length === 0 && (
+            <tr>
+              <td>
+                <div className='py-5 text-center'>
+                  <h1>Sorry! Nothing Found! :(</h1>
+                </div>
+              </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </Table>
     </>

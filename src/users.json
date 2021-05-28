@@ -98,5 +98,25 @@
     "phone": "024-648-3804",
     "website": "ambrose.net",
     "company": "Hoeger LLC"
+  },
+  {
+    "id": 11,
+    "name": "Rodrigo Grady",
+    "username": "Rodrigo.Grady1",
+    "email": "Rodrigo@Grady1.biz",
+    "address": "Abernathy, Suite 198, Lebsackbury",
+    "phone": "824-148-3804",
+    "website": "rodrigo.net",
+    "company": "Rodrigo LLC"
+  },
+  {
+    "id": 12,
+    "name": "Sage Boyer",
+    "username": "Moriah.Stanton",
+    "email": "Sage@Boyer.com",
+    "address": "Kattie Turnpike, Suite 198, Lebsackbury",
+    "phone": "024-648-3804",
+    "website": "Boyer.com",
+    "company": "Boyer LLC"
   }
 ]
